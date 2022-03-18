@@ -49,10 +49,13 @@
     </a-marker>
 
     <a-entity camera>
-        <img src="logo1.png" style="z-index: 999;top:0;left:0;width: 50px;height: 20px;">
-        <img src="logo2.png" style="z-index: 999;top:0;right:0;width: 500px;height: 20px;">
+        <img src="logo1.png"
+             style="z-index: 999;top:0;left:0;position:fixed;width:40vw;height:20vh;margin : -50px 0 0 0;">
+        <img src="logo2.png"
+             style="z-index: 999;top:0;right:0;position:fixed;width:40vw;height:20vh;margin : -50px 0 0 0;">
 
-        <span style="bottom: 0;right: 0;" onclick="showModal()">Know more</span>
+        <span style="bottom: 0;right: 0;position:fixed;margin: 0 10px 10px 0;background-color:white;color:black;padding:16px;border-radius:50px;width : 25vw;height:2vh;"
+              onclick="showModal()">Know more</span>
     </a-entity>
 
 </a-scene>
@@ -85,7 +88,8 @@
     MicroModal.init();
 
     function showModal() {
-        MicroModal.show('modal-id'); // [1]
+        console.log("Opening modal...");
+        MicroModal.show('modal-1'); // [1]
     }
 </script>
 </body>
